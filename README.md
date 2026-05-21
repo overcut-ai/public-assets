@@ -5,9 +5,10 @@ Publicly hosted assets for Overcut. Files in this repo are served via
 
 ## Catalog
 
-| File | Description |
+| Path | Description |
 |---|---|
 | `hero-embed.global.js` | Self-contained IIFE JavaScript bundle of the Overcut hero animation. ~466 KB raw / ~152 KB gzipped. |
+| `static/brand-logos/*.svg` | Brand-logo SVGs (Figma, Grafana, Sentry, Datadog, Notion, Slack, GitHub, GitLab, Jira, Linear, ClickUp, Bitbucket, Azure DevOps, Anthropic, OpenAI, etc.) referenced by `hero-embed.global.js` via `staticFile()`. The bundle sets `window.remotion_staticBase` to this directory's CDN URL on load. |
 
 ## jsDelivr URLs
 
@@ -25,5 +26,7 @@ Always prefer a pinned tag for production references.
 
 | Tag | Date | Notes |
 |---|---|---|
+| `v1.2.0` | 2026-05-21 | Adds `static/brand-logos/` so MCP card icons resolve when the bundle runs on a non-Webflow / non-CDN-aware host. Bundle now sets `window.remotion_staticBase` to this repo's `static/` URL before mounting. |
+| `v1.1.1` | 2026-05-21 | Re-tag of v1.1.0 at the rebased HEAD (v1.1.0 ended up on an orphan commit). Bundle content identical to v1.1.0. |
 | `v1.1.0` | 2026-05-21 | `hero-embed.global.js` composition canvas shrunk from 1920×1080 to 1280×720 so the animation reads at a larger size inside small page containers. |
 | `v1.0.0` | 2026-05-21 | Initial release. `hero-embed.global.js`. |
