@@ -25,4 +25,5 @@ Always prefer a pinned tag for production references.
 
 | Tag | Date | Notes |
 |---|---|---|
+| `v1.1.0` | 2026-05-21 | `hero-embed.global.js` composition canvas shrunk from 1920×1080 to 1280×720 so the animation reads at a larger size inside small page containers. |
 | `v1.0.0` | 2026-05-21 | Initial release. `hero-embed.global.js`. |
