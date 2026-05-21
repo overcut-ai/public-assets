@@ -3,9 +3,6 @@
 Publicly hosted assets for Overcut. Files in this repo are served via
 [jsDelivr](https://www.jsdelivr.com/) at a stable, cacheable CDN URL.
 
-Anything checked in here is **publicly readable**. Don't add secrets,
-unbuilt source, or anything you wouldn't put behind a `view-source` lookup.
-
 ## Catalog
 
 | File | Description |
