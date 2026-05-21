@@ -26,7 +26,8 @@ Always prefer a pinned tag for production references.
 
 | Tag | Date | Notes |
 |---|---|---|
-| `v1.2.0` | 2026-05-21 | Adds `static/brand-logos/` so MCP card icons resolve when the bundle runs on a non-Webflow / non-CDN-aware host. Bundle now sets `window.remotion_staticBase` to this repo's `static/` URL before mounting. |
+| `v1.3.0` | 2026-05-21 | Brand logos now resolve correctly inside `@remotion/player` embeds. Fixes a Remotion `staticFile()` quirk that prepended a leading `/` to absolute-URL static bases (producing `/https://...` paths). Bundle now uses `window.__overcut_brandLogoBase` instead of `window.remotion_staticBase`. |
+| `v1.2.0` | 2026-05-21 | Adds `static/brand-logos/` so MCP card icons resolve when the bundle runs on a non-Webflow / non-CDN-aware host. Bundle now sets `window.remotion_staticBase` to this repo's `static/` URL before mounting. **Note:** brand logos still 404 under `@remotion/player` due to the upstream staticFile bug — fixed in v1.3.0. |
 | `v1.1.1` | 2026-05-21 | Re-tag of v1.1.0 at the rebased HEAD (v1.1.0 ended up on an orphan commit). Bundle content identical to v1.1.0. |
 | `v1.1.0` | 2026-05-21 | `hero-embed.global.js` composition canvas shrunk from 1920×1080 to 1280×720 so the animation reads at a larger size inside small page containers. |
 | `v1.0.0` | 2026-05-21 | Initial release. `hero-embed.global.js`. |
